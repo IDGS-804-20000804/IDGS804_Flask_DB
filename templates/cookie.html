@@ -1,0 +1,24 @@
+{%extends "layout.html" %}
+
+{% block content %}
+
+<div>
+    {% from "_macros.html" import render_firld%}
+    <form action="/cookie" method="post" novalidate>
+        <div class="control-group">
+            <div class="controls">
+                {{render_firld(form.username)}}
+                {{render_firld(form.password)}}
+            </div>
+        </div>
+        <input type="submit" id="al" name="al" value="Registrar">
+    </form>
+</div>
+
+{% if vista == 'post' %}
+    <div class="col-md-4">
+
+    </div>
+{% endif %}
+
+{% endblock %}
